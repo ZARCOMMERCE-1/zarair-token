@@ -28,16 +28,22 @@ const config: HardhatUserConfig = {
     bscTestnet: {
       url:
         process.env.BSC_TESTNET_RPC_URL ??
-        "https://data-seed-prebsc-1-s1.binance.org:8545",
+        "https://data-seed-prebsc-1-s1.bnbchain.org:8545",
       chainId: 97,
       accounts,
     },
     bscMainnet: {
       url:
-        process.env.BSC_MAINNET_RPC_URL ?? "https://bsc-dataseed.binance.org",
+        process.env.BSC_MAINNET_RPC_URL ?? "https://bsc-dataseed.bnbchain.org",
       chainId: 56,
       accounts,
     },
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY ?? "",
+  },
+  sourcify: {
+    enabled: false,
   },
 };
 

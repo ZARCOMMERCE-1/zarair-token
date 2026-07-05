@@ -40,8 +40,9 @@ Required variables:
 
 ```ini
 PRIVATE_KEY=your_deployer_private_key_without_0x
-BSC_TESTNET_RPC_URL=https://data-seed-prebsc-1-s1.binance.org:8545
-BSC_MAINNET_RPC_URL=https://bsc-dataseed.binance.org
+BSC_TESTNET_RPC_URL=https://data-seed-prebsc-1-s1.bnbchain.org:8545
+BSC_MAINNET_RPC_URL=https://bsc-dataseed.bnbchain.org
+ETHERSCAN_API_KEY=your_etherscan_api_v2_key
 ```
 
 Never commit private keys, seed phrases, or real `.env` files.
@@ -66,6 +67,20 @@ Mainnet deployment should happen only after testnet deployment, contract verific
 
 ```bash
 pnpm run deploy:bsc-mainnet
+```
+
+## Verify Contract
+
+Verify on BSC Testnet:
+
+```bash
+pnpm hardhat verify --network bscTestnet <CONTRACT_ADDRESS>
+```
+
+Verify on BSC Mainnet:
+
+```bash
+pnpm hardhat verify --network bscMainnet <CONTRACT_ADDRESS>
 ```
 
 ## Security Notes
