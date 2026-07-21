@@ -11,5 +11,11 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  ignorePatterns: ["artifacts", "cache", "coverage", "node_modules", "typechain-types"],
+  ignorePatterns: [
+    "artifacts",
+    "cache",
+    "coverage",
+    "node_modules",
+    "typechain-types",
+  ],
 };

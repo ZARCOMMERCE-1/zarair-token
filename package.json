@@ -10,6 +10,7 @@
     "test": "hardhat test",
     "deploy:bsc-testnet": "hardhat run scripts/deploy.ts --network bscTestnet",
     "deploy:bsc-mainnet": "hardhat run scripts/deploy.ts --network bscMainnet",
+    "deploy:sale:bsc-testnet": "hardhat run scripts/deploy-sale.ts --network bscTestnet",
     "lint": "eslint \"{hardhat.config.ts,scripts/**/*.ts,test/**/*.ts}\"",
     "format": "prettier --write \"contracts/**/*.sol\" \"scripts/**/*.ts\" \"test/**/*.ts\" \"*.ts\" \"*.md\""
   },
